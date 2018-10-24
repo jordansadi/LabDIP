@@ -21,8 +21,12 @@ public class HourlyEmployee implements Employee {
         return totalHrsForYear;
     }
 
+    /*
+    since there is no overtime pay specified, the most an HourlyEmployee could work would need to be
+    52 full-time (40-hour) weeks, or 2080 hours
+    */
     public void setTotalHrsForYear(double totalHrsForYear) {
-        if(totalHrsForYear < 0 || totalHrsForYear > 5000) {
+        if(totalHrsForYear < 0 || totalHrsForYear > 2080) {
             throw new IllegalArgumentException();
         }
         this.totalHrsForYear = totalHrsForYear;
